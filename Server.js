@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+// Definición del esquema del usuario
 const usuarioSchema = new mongoose.Schema({
     Cedula: String,
     Correo: String,
@@ -10,9 +11,10 @@ const usuarioSchema = new mongoose.Schema({
 
 const Usuario = mongoose.model('Usuario', usuarioSchema);
 
+// Clase para manejar la conexión a MongoDB
 class MongoDBConnection {
     constructor() {
-        this.uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/ecoInnovacion';
+        this.uri = process.env.MONGODB_URI || 'mongodb+srv://cj912991:E6hDAt7yYJiWyaKZ@cluster0.tewvtqr.mongodb.net/Ecoinnovacion';
     }
 
     async connect() {
@@ -39,6 +41,7 @@ class MongoDBConnection {
     }
 }
 
+// Clase del servidor
 class Server {
     constructor() {
         this.app = express();
