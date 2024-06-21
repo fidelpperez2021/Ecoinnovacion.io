@@ -3,294 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+    <title>Asociación Ecoinnovación - Atacames y un Verde Futuro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+    <link href="./Styles.css" rel="stylesheet">
+    <link href="Styles.css" rel="stylesheet">
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 10px;
-        }
-
-        .logo h1 {
-            margin: 0;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-
-        .logo .highlight {
-            color: #4CAF50;
-            transition: color 0.3s;
-        }
-
-        .logo h1:hover .highlight {
-            color: #388E3C;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #1f2a1f;
-        }
-
-        .social-media {
-            display: flex;
-            gap: 10px;
-        }
-
-        .hero {
-            position: relative;
-            background-image: url('https://www.municipiodeatacames.gob.ec/images/turismo/atacames/atacames8.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            color: #fff;
-        }
-
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .hero-content h2 {
-            margin: 0;
-            font-size: 24px;
-            transition: transform 0.3s;
-        }
-
-        .hero-content h2:hover {
-            transform: scale(1.1);
-        }
-
-        .hero-content h1 {
-            margin: 10px 0;
-            font-size: 36px;
-            transition: transform 0.3s;
-        }
-
-        .hero-content h1:hover {
-            transform: scale(1.1);
-        }
-
-        .hero-content button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .hero-content button:hover {
-            background-color: #121612;
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .about-us {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
-            background-color: #f9f9f9;
-            padding: 40px 20px;
-        }
-
-        .about-us .about-content {
-            max-width: 600px;
-            text-align: left;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .about-us .about-content:hover {
-            transform: scale(1.05);
-        }
-
-        .about-us .about-content h2 {
-            color: #4CAF50;
-            transition: color 0.3s;
-        }
-
-        .about-us .about-content h2:hover {
-            color: #388E3C;
-        }
-
-        .about-us .about-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .about-us .about-images img,
-        .team .team-images img,
-        .mission .about-images img,
-        .vision .about-images img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .about-us .about-images img:hover,
-        .team .team-images img:hover,
-        .mission .about-images img:hover,
-        .vision .about-images img:hover {
-            transform: scale(1.05);
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 40px 20px;
-        }
-
-        .features .feature {
-            max-width: 300px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px;
-            transition: transform 0.3s;
-        }
-
-        .features .feature:hover {
-            transform: scale(1.05);
-        }
-
-        .team, .mission, .vision {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
-            background-color: #f9f9f9;
-            padding: 40px 20px;
-        }
-
-        .team .team-content,
-        .mission .mission-content,
-        .vision .vision-content {
-            max-width: 600px;
-            text-align: left;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .team .team-content:hover,
-        .mission .mission-content:hover,
-        .vision .vision-content:hover {
-            transform: scale(1.05);
-        }
-
-        .team .team-content h2,
-        .mission .mission-content h2,
-        .vision .vision-content h2 {
-            color: #4CAF50;
-            transition: color 0.3s;
-        }
-
-        .team .team-content h2:hover,
-        .mission .mission-content h2:hover,
-        .vision .vision-content h2:hover {
-            color: #388E3C;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .modal-content {
-            margin: 15% auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -301,108 +19,107 @@
             <ul>
                 <li><a href="Index.html">Inicio</a></li>
                 <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a href="#">Actividades</a></li>
-                <li><a href="#">Paquetes</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section class="hero">
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h2>ATACAMES</h2>
-                <h3>&</h3>
-                <h1>VERDE FUTURO</h1>
-                <button>Contáctanos</button>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>BIENVENIDO </h2>
+            <h3>A</h3>
+            <h1>ATACAMES</h1>
+            <a href="contacto.html" class="btn btn-outline-light">Contáctanos</a>
+        </div>
+    </section>
+    <main class="container my-5">
+        <section id="about" class="my-5">
+            <h2 class="text-box">Reforestación de los Manglares</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-box">
+                        <p>Los manglares son capaces de almacenar entre tres y cuatro veces más carbono que los bosques terrestres. Por ello, la reforestación de los manglares es esencial para reducir las causas del efecto invernadero y mantener el equilibrio global del CO2.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-box">
+                        <p>En Ecuador se han reforestado aproximadamente 3,000 hectáreas de manglar en la última década. Este esfuerzo ha sido parte de diversas iniciativas de conservación y restauración que buscan mitigar los efectos de la deforestación histórica causada por actividades como la camaronera y la expansión urbana.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-box">
+                        <p>En conjunto, estos esfuerzos no solo buscan restaurar el área perdida de manglares sino también asegurar su conservación a largo plazo, beneficiando tanto al medio ambiente como a las comunidades costeras que dependen de estos ecosistemas para su sustento.</p>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="about-us">
-            <div class="about-content">
-                <h2>¿QUIÉNES SOMOS?</h2>
-                <p>Somos una asociación juvenil dedicada a la reforestacion y limpieza del manglar y el rio Atacames y la protección del medio ambiente. Nuestro equipo está compuesto por jovenes apasionados por la naturaleza y comprometidos con la reforestación y conservación de los ecosistemas.</p>
-            </div>
-            <div class="about-images">
-                <img src="https://www.fotopaises.com/Fotos-Paises/t1024/2011/7/1/7799_1309485363.jpg" alt="Image 1">
-                <img src="https://www.fotopaises.com/Fotos-Paises/t1024/2011/7/1/7799_1309487694.jpg" alt="Image 2">
-            </div>
-        </section>
-
-        <section class="mission">
-            <div class="mission-content">
-                <h2>¿QUE HAREMOS?</h2>
-                <p>Nuestra misión es Limpiar, reforestar el manglar y succionar del sedimento del lecho del rio en la ciudad de Atacames, para recuperar el hábitat natural de la flora y fauna de nuestra ciudad y el ecosistema de nuestro río que son fuentes generadoras de productos básicos para la alimentación de nuestro pueblo.</p>
-            </div>
-            <div class="about-images">
-                <img src="https://grupojhacc.com/wp-content/uploads/2019/07/Jhacc_galeria_08.jpg" alt="Image 1">
-                <img src="https://www.ambiente.gob.ec/wp-content/uploads/2017/11/manglar-en-El-Oro.jpeg" alt="Image 2">
+        <section id="projects" class="my-5">
+            <h2 class="text-box">Proyectos de Reforestación y Protección</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-box">
+                        <h5 class="card-title">Proyectos Nacionales</h5>
+                        <p class="card-text">Iniciativas como el <strong>Programa Marino Costero</strong> han atraído significativas inversiones destinadas a la restauración y protección de nuestros preciosos ecosistemas costeros, asegurando un futuro más sostenible para nuestras costas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-box">
+                        <h5 class="card-title">Nuestro Proyecto Emblemático</h5>
+                        <p class="card-text">La reforestación del manglar de Atacames es una labor fundamental y requiere de tu apoyo. Este esfuerzo está liderado por jóvenes atacameños comprometidos con la ecología y la preservación de nuestro entorno natural.</p>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="vision">
-            <div class="vision-content">
-                <h2>¿PARA QUIEN LO HAREMOS?</h2>
-                <p>Para los moradores de la ciudad de Atacames que son 27.000 habitantes y para los turistas que visitan constantemente los cuales llegan entre 70 y 80.000 en temporada turística alta y 30 y 40.000 turistas que nos visitan en temporada baja.</p>
-            </div>
-            <div class="about-images">
-                <img src="https://imagenes.expreso.ec/files/image_440_279/uploads/2023/06/05/647e9efc24680.jpeg" alt="Image 1">
-                <img src="https://alltourecuador.com.ec/wp-content/uploads/2023/07/ATCAMES.png" alt="Image 2">
+        
+        <section class="my-5">
+            <h2 class="text-box">Imágenes de Semillas de Mangle</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="image-container" data-toggle="modal" data-target="#imageModal" data-src="https://fidelpperez2021.github.io/Ecoinnovacion.io/OIP.jpg" data-title="Mangle Blanco">
+                        <img src="https://fidelpperez2021.github.io/Ecoinnovacion.io/OIP.jpg" class="img-fluid equal-size" alt="Semilla de mangle 1">
+                        <div class="caption text-center mt-2">Mangle Blanco</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-container" data-toggle="modal" data-target="#imageModal" data-src="https://fidelpperez2021.github.io/Ecoinnovacion.io/R.jpg" data-title="Mangle Negro">
+                        <img src="https://fidelpperez2021.github.io/Ecoinnovacion.io/R.jpg" class="img-fluid equal-size" alt="Semilla de mangle 2">
+                        <div class="caption text-center mt-2">Mangle Negro</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-container" data-toggle="modal" data-target="#imageModal" data-src="https://live.staticflickr.com/3125/2641249781_4ec0652182_z.jpg" data-title="Mangle Rojo">
+                        <img src="https://live.staticflickr.com/3125/2641249781_4ec0652182_z.jpg" class="img-fluid equal-size" alt="Semilla de mangle 3">
+                        <div class="caption text-center mt-2">Mangle Rojo</div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="team">
-            <div class="team-content">
-                <h2>NUESTRO EQUIPO</h2>
-                <p>Contamos con jóvenes ecologistas de nuestra ciudad, estudiantes de primero de bachillerato de los colegios los cuales son entre 150 y 200 jóvenes que están en el taller de brigada en el área de medio ambiente.</p>
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Imagen Ampliada</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" id="modalImage" class="img-fluid" alt="Imagen Ampliada">
+                        <p id="imageTitle" class="mt-3"></p>
+                    </div>
+                </div>
             </div>
-            <div class="team-images">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSZQdQeDC-CxFJc8S3ogecJVUFN1kFWyetbw0XRXlv8hRWKibokWD2hhfni2QqgzHbV-Mjm2i-G_D7QPK07ObHdNd9o2QcheM1RNa4AQcUCQGG6aTXi0VPNvTch9elP5al3KBjjYKzIuKA/s1600/IMG_20160816_162453.jpg" alt="Team Member 1">
-                <img src="https://www.rtv.org.mx/masnoticias/wp-content/uploads/sites/13/2023/06/WhatsApp-Image-2023-06-07-at-17.51.16.jpeg" alt="Team Member 2">
-            </div>
-        </section>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2024 ECOINNOVACION ATACAMES. Todos los derechos reservados.</p>
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Asociación Ecoinnovación</p>
     </footer>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-    </div>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var modalImg = document.getElementById("img01");
-        var images = document.querySelectorAll(".about-images img, .team-images img");
-
-        images.forEach(function(image) {
-            image.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        });
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-
-        // Close the modal when clicking outside of the image
-        modal.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Doc.js"></script>
+    <script src="Images.js"></script>
 </body>
 </html>
