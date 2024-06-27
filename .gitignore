@@ -1,0 +1,4 @@
+.vercel
+.env
+private.key
+node_modules/
