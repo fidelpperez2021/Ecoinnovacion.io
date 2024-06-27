@@ -1,5 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
+const fs = require('fs'); // Asegúrate de que esté incluido al principio del archivo
+
+
+const options = {
+    key: fs.readFileSync('C:/Users/cj912/Desktop/Tareas para la Universidad/EXTRAS/Atacames y un futuro verde/private.key'),
+    cert: fs.readFileSync('C:/Users/cj912/Desktop/Tareas para la Universidad/EXTRAS/Atacames y un futuro verde/certificate.crt')
+};
+
 
 // Definición del esquema del usuario
 const usuarioSchema = new mongoose.Schema({
@@ -30,9 +40,9 @@ class MongoDBConnection {
         }
     }
 
-    close() {
+    async close() {
         try {
-            mongoose.disconnect();
+            await mongoose.disconnect();
             console.log('Conexión a la base de datos MongoDB cerrada correctamente');
         } catch (error) {
             console.error('Error al cerrar la conexión a la base de datos MongoDB:', error);
@@ -47,8 +57,6 @@ class Server {
         this.app = express();
         this.port = process.env.PORT || 3000;
         this.apiPath = '/api';
-        this.app.use(express.static('public'));
-        this.app.use(express.json());
 
         this.dbConnection = new MongoDBConnection();
         this.dbConnection.connect()
@@ -61,12 +69,11 @@ class Server {
     }
 
     middlewares() {
-        this.app.use((req, res, next) => {
-            res.header('Access-Control-Allow-Origin', '*');
-            res.header('Access-Control-Allow-Headers', 'Content-Type, x-token');
-            res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-            next();
-        });
+        // Configuración de CORS
+        this.app.use(cors());
+
+        this.app.use(express.static('public'));
+        this.app.use(express.json());
     }
 
     routes() {
