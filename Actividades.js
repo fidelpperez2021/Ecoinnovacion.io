@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {s
+document.addEventListener('DOMContentLoaded', function() {
     const activities = [
         { activity: 'Difusión de nuestro proyecto de limpieza y reforestación del manglar.', date: '08-15/07/2024', remark: 'INICIO' },
         { activity: 'Capacitaciones técnicas para la comunidad', date: '05-23/08/2024' },
