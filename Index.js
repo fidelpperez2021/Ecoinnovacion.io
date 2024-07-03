@@ -22,8 +22,8 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // Crear servidor HTTPS
-https.createServer(options, app).listen(3000, () => {
-    console.log('Servidor HTTPS corriendo en puerto 3000'.cyan); // Utilizando colors para dar formato
+https.createServer(options, app).listen(3001, () => {
+    console.log('Servidor HTTPS corriendo en puerto 3001'.cyan); // Utilizando colors para dar formato
 });
 
 // Limpiar la consola
@@ -33,6 +33,3 @@ console.clear();
 const server = new Server();
 server.listen();
 console.log(`Servidor iniciado en puerto ${server.port.toString().cyan}`);
-
-
-
