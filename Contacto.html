@@ -90,18 +90,23 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
     <!-- Custom JavaScript for handling form submission -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
             event.preventDefault();
-    
+
             const formData = {
                 Cedula: document.getElementById('cedula').value,
                 Correo: document.getElementById('email').value,
                 Mensaje: document.getElementById('message').value,
                 Nombre: document.getElementById('name').value
             };
-    
+
             try {
                 const response = await fetch('http://192.168.1.34:3001/api/Usuario', {
                     method: 'POST',
@@ -110,12 +115,14 @@
                     },
                     body: JSON.stringify(formData)
                 });
-    
+
                 if (response.ok) {
                     alert('Formulario enviado correctamente');
                     document.getElementById('contactForm').reset();
                 } else {
-                    alert('Error al enviar el formulario. Estado: ' + response.status);
+                    const errorText = await response.text();
+                    console.error('Error al enviar el formulario:', response.status, errorText);
+                    alert('Error al enviar el formulario. Estado: ' + response.status + '. Consulta la consola para más detalles.');
                 }
             } catch (error) {
                 console.error('Error al enviar el formulario:', error);
@@ -125,3 +132,4 @@
     </script>    
 </body>
 </html>
+
