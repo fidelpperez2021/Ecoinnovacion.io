@@ -1,15 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
 const fs = require('fs'); // Asegúrate de que esté incluido al principio del archivo
-
-
 const options = {
     key: fs.readFileSync('C:/Users/cj912/Desktop/Tareas para la Universidad/EXTRAS/Atacames y un futuro verde/private.key'),
     cert: fs.readFileSync('C:/Users/cj912/Desktop/Tareas para la Universidad/EXTRAS/Atacames y un futuro verde/certificate.crt')
 };
-
 
 // Definición del esquema del usuario
 const usuarioSchema = new mongoose.Schema({
@@ -29,10 +25,7 @@ class MongoDBConnection {
 
     async connect() {
         try {
-            await mongoose.connect(this.uri, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true
-            });
+            await mongoose.connect(this.uri);
             console.log('Conexión a la base de datos MongoDB establecida');
         } catch (error) {
             console.error('Error al conectar a la base de datos MongoDB:', error);
@@ -51,11 +44,12 @@ class MongoDBConnection {
     }
 }
 
+
 // Clase del servidor
 class Server {
     constructor() {
         this.app = express();
-        this.port = process.env.PORT || 3000;
+        this.port = process.env.PORT || 3001;
         this.apiPath = '/api';
 
         this.dbConnection = new MongoDBConnection();
