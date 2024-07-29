@@ -29,3 +29,49 @@ document.addEventListener('DOMContentLoaded', function() {
         calendarTable.appendChild(row);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.activity-menu button');
+    const contents = document.querySelectorAll('.activity-content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Hide all contents
+            contents.forEach(content => content.classList.add('d-none'));
+
+            // Add active class to the clicked button
+            button.classList.add('active');
+            // Show the associated content
+            const activityId = button.getAttribute('data-activity');
+            document.getElementById(activityId).classList.remove('d-none');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.activity-menu button');
+    const contents = document.querySelectorAll('.activity-content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const link = button.getAttribute('data-link');
+            if (link) {
+                window.location.href = link;
+                return;
+            }
+
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Hide all contents
+            contents.forEach(content => content.classList.add('d-none'));
+
+            // Add active class to the clicked button
+            button.classList.add('active');
+            // Show the associated content
+            const activityId = button.getAttribute('data-activity');
+            document.getElementById(activityId).classList.remove('d-none');
+        });
+    });
+});
