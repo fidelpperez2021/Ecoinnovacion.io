@@ -33,7 +33,7 @@
             height: 100%;
             border: none;
             z-index: 1;
-            object-fit: cover;
+            object-fit: cover; /* Ajuste para eliminar los bordes negros */
         }
         .overlay {
             position: absolute;
@@ -80,10 +80,7 @@
             <h1>ATACAMES</h1>
             <a href="contacto.html" class="btn btn-outline-light">Contáctanos</a>
         </div>
-       <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4ejvj71O_XM?si=1uyqxM_3UtHHBsQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; height: 100%; object-fit: cover;"></iframe>
-</div>
-
+        <iframe src="https://www.youtube.com/embed/anuOxaIifsE?autoplay=1&mute=1&loop=1&playlist=anuOxaIifsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; height: 100%; object-fit: cover;"></iframe>
     </section>
     <main class="container my-5">
         <section id="about" class="my-5">
@@ -170,16 +167,29 @@
     </div>
 
     <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/4ejvj71O_XM?si=1uyqxM_3UtHHBsQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4ejvj71O_XM?si=1YJ1GoahzKhRh_Ly" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    
-    <footer class="text-center py-3">
-        <p>&copy; 2024 Asociación Ecoinnovación</p>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Asociación Ecoinnovación. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="Doc.js"></script>
-    <script src="Images.js"></script>
+
+    <script>
+        $('#imageModal').on('show.bs.modal', function (event) {
+            var imageContainer = $(event.relatedTarget);
+            var src = imageContainer.data('src');
+            var title = imageContainer.data('title');
+
+            var modal = $(this);
+            modal.find('#modalImage').attr('src', src);
+            modal.find('#imageTitle').text(title);
+        });
+    </script>
 </body>
 </html>
