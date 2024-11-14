@@ -1,0 +1,341 @@
+<<<<<<< HEAD
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    background-color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 15px 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+.carousel-item {
+    height: 65vh;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 200px;
+}
+
+.contact-form {
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.contact-form .form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    box-shadow: none;
+}
+
+.contact-form .btn {
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold; /* Agregamos negrita */
+    transition: color 0.20s;
+}
+
+
+.logo .highlight {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.logo h1:hover .highlight {
+    color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f2a1f;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://fidelpperez2021.github.io/Ecoinnovacion.io/manglar.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.hero-content h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    transition: transform 0.3s;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.1);
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #121612;
+}
+=======
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    background-color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 15px 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+.carousel-item {
+    height: 65vh;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 200px;
+}
+
+.contact-form {
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.contact-form .form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    box-shadow: none;
+}
+
+.contact-form .btn {
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold; /* Agregamos negrita */
+    transition: color 0.20s;
+}
+
+
+.logo .highlight {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.logo h1:hover .highlight {
+    color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f2a1f;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://fidelpperez2021.github.io/Ecoinnovacion.io/manglar.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.hero-content h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    transition: transform 0.3s;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.1);
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #121612;
+}
+>>>>>>> 86dde0c8a69128f81c6821935231cd99efc1ccda

@@ -1,0 +1,575 @@
+<<<<<<< HEAD
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.logo .highlight {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.logo h1:hover .highlight {
+    color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f2a1f;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://www.municipiodeatacames.gob.ec/images/turismo/atacames/atacames8.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.hero-content h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    transition: transform 0.3s;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.1);
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #121612;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.about-us .about-content {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.about-us .about-content:hover {
+    transform: scale(1.05);
+}
+
+.about-us .about-content h2 {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.about-us .about-content h2:hover {
+    color: #388E3C;
+}
+
+.about-us .about-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-us .about-images img,
+.team .team-images img,
+.mission .about-images img,
+.vision .about-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.about-us .about-images img:hover,
+.team .team-images img:hover,
+.mission .about-images img:hover,
+.vision .about-images img:hover {
+    transform: scale(1.05);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.features .feature {
+    max-width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.features .feature:hover {
+    transform: scale(1.05);
+}
+
+.team, .mission, .vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.team .team-content,
+.mission .mission-content,
+.vision .vision-content {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team .team-content:hover,
+.mission .mission-content:hover,
+.vision .vision-content:hover {
+    transform: scale(1.05);
+}
+
+.team .team-content h2,
+.mission .mission-content h2,
+.vision .vision-content h2 {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.team .team-content h2:hover,
+.mission .mission-content h2:hover,
+.vision .vision-content h2:hover {
+    color: #388E3C;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+=======
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.logo .highlight {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.logo h1:hover .highlight {
+    color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f2a1f;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://www.municipiodeatacames.gob.ec/images/turismo/atacames/atacames8.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.hero-content h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    transition: transform 0.3s;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.1);
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #121612;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.about-us .about-content {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.about-us .about-content:hover {
+    transform: scale(1.05);
+}
+
+.about-us .about-content h2 {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.about-us .about-content h2:hover {
+    color: #388E3C;
+}
+
+.about-us .about-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-us .about-images img,
+.team .team-images img,
+.mission .about-images img,
+.vision .about-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.about-us .about-images img:hover,
+.team .team-images img:hover,
+.mission .about-images img:hover,
+.vision .about-images img:hover {
+    transform: scale(1.05);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.features .feature {
+    max-width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.features .feature:hover {
+    transform: scale(1.05);
+}
+
+.team, .mission, .vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.team .team-content,
+.mission .mission-content,
+.vision .vision-content {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team .team-content:hover,
+.mission .mission-content:hover,
+.vision .vision-content:hover {
+    transform: scale(1.05);
+}
+
+.team .team-content h2,
+.mission .mission-content h2,
+.vision .vision-content h2 {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.team .team-content h2:hover,
+.mission .mission-content h2:hover,
+.vision .vision-content h2:hover {
+    color: #388E3C;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+>>>>>>> 86dde0c8a69128f81c6821935231cd99efc1ccda

@@ -1,0 +1,23 @@
+{
+  "name": "atacames-y-un-futuro-verde",
+  "version": "1.0.0",
+  "main": "Actividades.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.4.3",
+    "mysql2": "^3.11.3"
+  }
+}
