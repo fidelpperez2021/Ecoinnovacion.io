@@ -1,0 +1,502 @@
+<<<<<<< HEAD
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold; /* Agregamos negrita */
+    transition: color 0.20s;
+}
+
+
+.logo .highlight {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.logo h1:hover .highlight {
+    color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f2a1f;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+/* Estilos específicos de Bootstrap */
+
+.container {
+    max-width: 900px;
+}
+
+.carousel-item img {
+    border-radius: 10px; /* Bordes redondeados para las imágenes del carousel */
+}
+
+.text-box {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-box h3 {
+    font-size: 20px; /* Tamaño del título */
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 16px; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555555; /* Color de texto gris oscuro */
+}
+
+.text-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+
+
+.project-card {
+    border: none; /* Sin borde para las tarjetas de proyecto */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra ligera */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #333333;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555555;
+    font-weight: bold;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse sobre las imágenes */
+}
+
+
+/* Estilos para el footer */
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media queries para dispositivos móviles */
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2rem; /* Tamaño de fuente ligeramente menor para dispositivos móviles */
+    }
+
+    nav ul {
+        text-align: center; /* Centrar enlaces del menú en dispositivos móviles */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://www.municipiodeatacames.gob.ec/images/turismo/atacames/atacames8.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.hero-content h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    transition: transform 0.3s;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.1);
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #121612;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+.hero iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 1;
+    object-fit: cover; /* Añadir esta línea */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent overlay */
+    z-index: 2;
+=======
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold; /* Agregamos negrita */
+    transition: color 0.20s;
+}
+
+
+.logo .highlight {
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.logo h1:hover .highlight {
+    color: #388E3C;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f2a1f;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+/* Estilos específicos de Bootstrap */
+
+.container {
+    max-width: 900px;
+}
+
+.carousel-item img {
+    border-radius: 10px; /* Bordes redondeados para las imágenes del carousel */
+}
+
+.text-box {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-box h3 {
+    font-size: 20px; /* Tamaño del título */
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 16px; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555555; /* Color de texto gris oscuro */
+}
+
+.text-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+
+
+.project-card {
+    border: none; /* Sin borde para las tarjetas de proyecto */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra ligera */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #333333;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555555;
+    font-weight: bold;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse sobre las imágenes */
+}
+
+
+/* Estilos para el footer */
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media queries para dispositivos móviles */
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2rem; /* Tamaño de fuente ligeramente menor para dispositivos móviles */
+    }
+
+    nav ul {
+        text-align: center; /* Centrar enlaces del menú en dispositivos móviles */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://fidelpperez2021.github.io/Ecoinnovacion.io/C_shutterstock_434380678-1-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.hero-content h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    transition: transform 0.3s;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.1);
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #121612;
+>>>>>>> 86dde0c8a69128f81c6821935231cd99efc1ccda
+}
