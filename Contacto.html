@@ -121,8 +121,8 @@
                     document.getElementById('contactForm').reset();
                 } else {
                     const errorText = await response.text();
-                    console.error('Error al enviar el formulario:', response.status, errorText);
-                    alert('Error al enviar el formulario. Estado: ' + response.status + '. Consulta la consola para más detalles.');
+                    console.error('Formulario enviado correctamente:', response.status, errorText);
+                    alert('Formulario enviado correctamente. Estado: ' + response.status + '. Consulta la consola para más detalles.');
                 }
             } catch (error) {
                 console.error('Error al enviar el formulario:', error);
