@@ -14,6 +14,15 @@ const options = {
 };
 
 
+// Activar submenús con Bootstrap 4
+$('.dropdown-submenu .dropdown-toggle').on("click", function(e) {
+  $(this).next('.dropdown-menu').toggle();
+  e.stopPropagation();
+  e.preventDefault();
+});
+
+
+
 // Crear instancia de Express
 const app = express();
 
