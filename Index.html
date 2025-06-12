@@ -73,18 +73,28 @@
                 <ul class="navbar-nav ml-auto">
            
                    
-                    <!-- Menú desplegable -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Menú
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="Index.html">Inicio</a>
-                            <a class="dropdown-item" href="SobreNosotros.html">Sobre Nosotros</a>
-                            <a class="dropdown-item" href="Actividades.html">Actividades</a>
-                            <a class="dropdown-item" href="Contacto.html">Contacto</a>
-                        </div>
-                    </li>
+                   <!-- Menú desplegable -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menú
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="Index.html">Inicio</a>
+    <a class="dropdown-item" href="SobreNosotros.html">Sobre Nosotros</a>
+
+    <!-- Submenú dentro de Actividades -->
+    <div class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">Actividades</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="AtacamesVerdeFuturo.html">Atacames y verde futuro</a></li>
+        <li><a class="dropdown-item" href="EconexionAtacames.html">Econexión con Atacames</a></li>
+      </ul>
+    </div>
+
+    <a class="dropdown-item" href="Contacto.html">Contacto</a>
+  </div>
+</li>
+
                 </ul>
             </div>
         </nav>
