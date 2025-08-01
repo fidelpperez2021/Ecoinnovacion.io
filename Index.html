@@ -180,6 +180,33 @@
             </div>
         </div>
     </main>
+
+
+
+
+
+<script>
+  // Deshabilitar clic derecho
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+
+  // Deshabilitar Ctrl + U y F12
+  document.addEventListener("keydown", function(e) {
+    if (
+      (e.ctrlKey && e.key === 'u') || 
+      (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+      (e.key === 'F12')
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+
+
+    
     <footer>
         
         <footer class="text-center py-3">
