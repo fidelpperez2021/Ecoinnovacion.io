@@ -193,10 +193,14 @@
   });
 
   // Deshabilitar Ctrl + U y F12
-  document.addEventListener("keydown", function (e) {
-    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+   document.addEventListener("keydown", function(e) {
+    if (
+      (e.ctrlKey && e.key === 'u') || 
+      (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+      (e.key === 'F12')
+    ) {
       e.preventDefault();
-      alert("El administrador no permite ver información confidencial.");
+        alert("El administrador no permite ver información confidencial.");
     }
   });
 </script>
